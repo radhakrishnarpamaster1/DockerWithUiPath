@@ -1,0 +1,8 @@
+# Use the official UiPath base image
+FROM uipathplatform/robot:latest
+# Set the work directory
+WORKDIR /app
+# Copy the published project to the container
+COPY HelloWorld /app/HelloWorld
+# Run the UiPath Robot with the specified project
+CMD ["UiRobot", "-file", "HelloWorld\project.json"]
